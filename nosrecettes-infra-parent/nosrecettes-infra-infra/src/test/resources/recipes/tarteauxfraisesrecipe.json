@@ -1,0 +1,14 @@
+{
+  "name": "tarte aux fraise",
+  "source": "www.google.com",
+  "season": "SPRING",
+  "type": "tarte",
+  "ingredients": [
+    {
+      "quantity": 200
+    },
+    {
+      "quantity": 300
+    }
+  ]
+}

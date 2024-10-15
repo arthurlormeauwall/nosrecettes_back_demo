@@ -1,0 +1,5 @@
+FROM openjdk:21
+ADD nosrecettes-infra-parent/nosrecettes-infra-infra/target/nosrecettes-application-0.0.1.jar nosrecettes-application-0.0.1.jar
+ADD nosrecettes-infra-parent/nosrecettes-infra-infra/src/main/resources/application-prod.yml application-prod.yml
+
+ENTRYPOINT ["java", "-Dspring.config.location=application-prod.yml", "-Dspring.profiles.active=prod", "-jar", "nosrecettes-application-0.0.1.jar"]

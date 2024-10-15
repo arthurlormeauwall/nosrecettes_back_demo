@@ -1,0 +1,14 @@
+{
+  "name": "pizza",
+  "source": "www.google.com",
+  "season": "SUMMER",
+  "type": "tarte",
+  "ingredients": [
+    {
+      "quantity": 1
+    },
+    {
+      "quantity": 200
+    }
+  ]
+}

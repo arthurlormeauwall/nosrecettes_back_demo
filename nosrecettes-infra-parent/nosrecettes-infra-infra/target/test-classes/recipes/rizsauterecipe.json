@@ -1,0 +1,14 @@
+{
+  "name": "riz saute",
+  "source": "www.google.com",
+  "season": "SUMMER",
+  "type": "mijote",
+  "ingredients": [
+    {
+      "quantity": 200
+    },
+    {
+      "quantity": 300
+    }
+  ]
+}

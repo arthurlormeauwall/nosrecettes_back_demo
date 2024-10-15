@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://nosrecettes-11080.7tc.aws-eu-central-1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full
+    username: alorme
+    password: AxXmO2VLSSHobbV2hRFSxg
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update

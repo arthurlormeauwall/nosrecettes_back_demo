@@ -1,0 +1,59 @@
+{
+  "id": 47,
+  "name": "Roasted Potato Salad with Lentils",
+  "source": "https://thefirstmess.com/2017/04/19/roasted-potato-salad-lentils-spring-vegetables-recipe/",
+  "season": null,
+  "type": "salade",
+  "ingredients": [
+    {
+      "quantity": 18.0,
+      "itemId": 2,
+      "id": 363
+    },
+    {
+      "quantity": 10.0,
+      "itemId": 10,
+      "id": 364
+    },
+    {
+      "quantity": 3.0,
+      "itemId": 19,
+      "id": 365
+    },
+    {
+      "quantity": 1.0,
+      "itemId": 26,
+      "id": 366
+    },
+    {
+      "quantity": 900.0,
+      "itemId": 42,
+      "id": 367
+    },
+    {
+      "quantity": 1.0,
+      "itemId": 47,
+      "id": 368
+    },
+    {
+      "quantity": 125.0,
+      "itemId": 88,
+      "id": 369
+    },
+    {
+      "quantity": 1.0,
+      "itemId": 104,
+      "id": 370
+    },
+    {
+      "quantity": 1.0,
+      "itemId": 119,
+      "id": 371
+    },
+    {
+      "quantity": 1.0,
+      "itemId": 143,
+      "id": 372
+    }
+  ]
+}

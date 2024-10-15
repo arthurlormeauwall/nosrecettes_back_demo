@@ -1,0 +1,4 @@
+FROM openjdk:21
+ADD ./nosrecettes-infra-parent/nosrecettes-infra-infra/target/nosrecettes-infra-infra-0.0.1-SNAPSHOT.jar nosrecettes-infra-infra-0.0.1-SNAPSHOT.jar
+ADD nosrecettes-infra-parent/nosrecettes-infra-infra/src/main/resources/application-lab.yml application-lab.yml
+ENTRYPOINT ["java", "-Dspring.config.location=application-lab.yml", "-Dspring.profiles.active=lab", "-jar", "/nosrecettes-infra-infra-0.0.1-SNAPSHOT.jar"]

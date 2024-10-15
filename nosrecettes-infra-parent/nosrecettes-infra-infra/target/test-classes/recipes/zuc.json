@@ -1,0 +1,43 @@
+{
+  "id": 13,
+  "name": "Herb Garden Zucchini Pizza - Love and Lemons",
+  "source": "https://www.loveandlemons.com/zucchini-pizza/#_a5y_p=6730923",
+  "season": null,
+  "type": "tarte/quiche/pizza",
+  "ingredients": [
+    {
+      "quantity": 2.0,
+      "itemId": 21,
+      "id": 92
+    },
+    {
+      "quantity": 13.0,
+      "itemId": 23,
+      "id": 93
+    },
+    {
+      "quantity": 3.5,
+      "itemId": 20
+    },
+    {
+      "quantity": 1.0,
+      "itemId": 72,
+      "id": 94
+    },
+    {
+      "quantity": 1.0,
+      "itemId": 106,
+      "id": 95
+    },
+    {
+      "quantity": 1.0,
+      "itemId": 120,
+      "id": 96
+    },
+    {
+      "quantity": 1.0,
+      "itemId": 156,
+      "id": 97
+    }
+  ]
+}

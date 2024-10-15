@@ -1,0 +1,14 @@
+{
+  "name": "tarte aux prunes",
+  "source": "www.google.com",
+  "season": "SPRING",
+  "type": "tarte",
+  "ingredients": [
+    {
+      "quantity": 30
+    },
+    {
+      "quantity": 200
+    }
+  ]
+}

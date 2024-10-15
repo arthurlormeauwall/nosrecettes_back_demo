@@ -1,0 +1,35 @@
+services:
+  nosrecettes-lab:
+    build:
+      context: .
+      dockerfile: Dockerfile-lab
+    ports:
+      - 8090:8090
+    depends_on:
+      mysqldb-lab:
+        condition: service_healthy
+    environment:
+      - SPRING_PROFILES_ACTIVE=lab
+    networks:
+      - springboot-mysql-network
+  mysqldb-lab:
+    image: mysql:8.0.33
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_DATABASE=nosrecetteslab
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysql-data-lab:/var/lib/mysql
+    networks:
+      - springboot-mysql-network
+    healthcheck:
+      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+      retries: 10
+      interval: 3s
+      timeout: 30s
+volumes:
+  mysql-data-lab:
+networks:
+  springboot-mysql-network:
+    name: springboot-mysql-network
