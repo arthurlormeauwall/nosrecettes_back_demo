@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.nio.file.Path;
 import java.util.Arrays;
 
 @Service
@@ -32,9 +31,7 @@ public class ImportCsv {
     }
 
     public void import_recipes() throws Exception {
-        Path filePath = Path.of(
-                OpenCsvUtil.class.getClassLoader().getResource("demoutil/toimport/nosrecettes.csv").getPath());
-        var listOfRecipes = OpenCsvUtil.readLineByLine(filePath);
+        var listOfRecipes = OpenCsvUtil.readLineByLine("demotutil/toImport/nosrecettes.csv");
         import_items(listOfRecipes.getFirst());
         var items = itemController.findAll();
         for (int i = 1; i < listOfRecipes.size(); i++) {
@@ -43,7 +40,7 @@ public class ImportCsv {
         }
     }
 
-    private void import_items(String[] itemArray) throws IOException {
+    private void import_items(String[] itemArray) {
         var itemList = Arrays.stream(itemArray).toList();
         itemList = itemList.subList(3, itemList.size());
         int lastItemIndex = itemList.size() - 1;
