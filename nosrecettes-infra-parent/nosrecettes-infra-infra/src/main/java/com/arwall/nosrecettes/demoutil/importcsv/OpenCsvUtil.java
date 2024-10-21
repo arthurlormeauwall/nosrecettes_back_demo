@@ -1,14 +1,12 @@
-package com.arwall.nosrecettes.importInDb;
+package com.arwall.nosrecettes.demoutil.importcsv;
 
-import java.io.FileWriter;
+import com.opencsv.CSVReader;
+
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.opencsv.CSVReader;
-import com.opencsv.CSVWriter;
 
 public class OpenCsvUtil {
 
@@ -23,11 +21,5 @@ public class OpenCsvUtil {
             }
         }
         return list;
-    }
-
-    public static void writeAllLines(List<String[]> lines, String fileName) throws Exception {
-        try (CSVWriter writer = new CSVWriter(new FileWriter(fileName))) {
-            writer.writeAll(lines);
-        }
     }
 }

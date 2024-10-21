@@ -1,27 +1,34 @@
-package com.arwall.nosrecettes.importInDb;
-
-import static com.arwall.nosrecettes.importInDb.ImportCsv.TYPE_MARKER;
-import static com.arwall.nosrecettes.importInDb.ImportItemUtil.resolveQuantityType;
-
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+package com.arwall.nosrecettes.demoutil.importcsv;
 
 import com.arwall.nosrecettes.domain.model.Ingredient;
 import com.arwall.nosrecettes.domain.model.Recipe;
 import com.arwall.nosrecettes.rest.model.RestItem;
 import com.arwall.nosrecettes.rest.model.RestRecipe;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+import static com.arwall.nosrecettes.demoutil.importcsv.ImportCsv.TYPE_MARKER;
+import static com.arwall.nosrecettes.demoutil.importcsv.ImportItemUtil.resolveQuantityType;
+
+@Service
 public class ImportRecipeUtil {
 
-    public static RestRecipe getRestRecipe(String[] itemNames, String[] recipeAsArray, List<RestItem> items)
-            throws IOException {
+    ImportItemUtil importItemUtil;
+
+    @Autowired
+    ImportRecipeUtil(ImportItemUtil importItemUtil) {
+        this.importItemUtil = importItemUtil;
+    }
+
+    public RestRecipe getRestRecipe(String[] itemNames, String[] recipeAsArray, List<RestItem> items) {
         return new RestRecipe(getRecipe(itemNames, recipeAsArray, items));
     }
 
-    private static Recipe getRecipe(String[] itemNames, String[] recipeAsArray, List<RestItem> items)
-            throws IOException {
+    private Recipe getRecipe(String[] itemNames, String[] recipeAsArray, List<RestItem> items) {
         var recipe = Recipe.builder().withName(recipeAsArray[0]).withType(recipeAsArray[1]).withSource(recipeAsArray[2])
                 .build();
         for (int ingredientIndex = 3; ingredientIndex < recipeAsArray.length; ingredientIndex++) {
@@ -37,19 +44,19 @@ public class ImportRecipeUtil {
         return recipe;
     }
 
-    private static Recipe addIngredient(Recipe recipe, Ingredient ingredient) {
+    private Recipe addIngredient(Recipe recipe, Ingredient ingredient) {
         var ingredients = recipe.getIngredients();
         ingredients.add(ingredient);
         return Recipe.builder(recipe).withIngredients(ingredients).build();
     }
 
-    private static Ingredient getIngredient(String nameAndType, List<RestItem> items, String quantity) {
+    private Ingredient getIngredient(String nameAndType, List<RestItem> items, String quantity) {
         Long itemId = resolveItemId(nameAndType, items);
 
         return Ingredient.builder().withQuantiy(Float.valueOf(quantity)).withItemId(itemId).build();
     }
 
-    private static Long resolveItemId(String nameAndType, List<RestItem> items) {
+    private Long resolveItemId(String nameAndType, List<RestItem> items) {
         var splitNameAndType = Arrays.stream(nameAndType.split(" _")).toList();
         var name = splitNameAndType.get(0);
         var type = splitNameAndType.get(1);
