@@ -1,7 +1,0 @@
-/home/alorme/dev/nosrecettes/nosrecettes_back/nosrecettes-domain-parent/nosrecettes-domain-domain/src/test/java/com/arwall/nosrecettes/domain/service/IngredientFromMenuServiceTest.java
-/home/alorme/dev/nosrecettes/nosrecettes_back/nosrecettes-domain-parent/nosrecettes-domain-domain/src/test/java/com/arwall/nosrecettes/domain/service/ItemServiceTest.java
-/home/alorme/dev/nosrecettes/nosrecettes_back/nosrecettes-domain-parent/nosrecettes-domain-domain/src/test/java/com/arwall/nosrecettes/domain/service/MenuServiceTest.java
-/home/alorme/dev/nosrecettes/nosrecettes_back/nosrecettes-domain-parent/nosrecettes-domain-domain/src/test/java/com/arwall/nosrecettes/domain/service/RecipeServiceTest.java
-/home/alorme/dev/nosrecettes/nosrecettes_back/nosrecettes-domain-parent/nosrecettes-domain-domain/src/test/java/com/arwall/nosrecettes/domain/stubfactories/IngredientFromMenuStubs.java
-/home/alorme/dev/nosrecettes/nosrecettes_back/nosrecettes-domain-parent/nosrecettes-domain-domain/src/test/java/com/arwall/nosrecettes/domain/stubfactories/ItemStubs.java
-/home/alorme/dev/nosrecettes/nosrecettes_back/nosrecettes-domain-parent/nosrecettes-domain-domain/src/test/java/com/arwall/nosrecettes/domain/stubfactories/RecipeStubs.java

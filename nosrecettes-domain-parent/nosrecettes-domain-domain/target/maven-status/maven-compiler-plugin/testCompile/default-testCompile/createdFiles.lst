@@ -1,7 +1,0 @@
-com/arwall/nosrecettes/domain/stubfactories/ItemStubs.class
-com/arwall/nosrecettes/domain/service/ItemServiceTest.class
-com/arwall/nosrecettes/domain/service/IngredientFromMenuServiceTest.class
-com/arwall/nosrecettes/domain/service/RecipeServiceTest.class
-com/arwall/nosrecettes/domain/service/MenuServiceTest.class
-com/arwall/nosrecettes/domain/stubfactories/RecipeStubs.class
-com/arwall/nosrecettes/domain/stubfactories/IngredientFromMenuStubs.class
